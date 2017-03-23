@@ -1,4 +1,5 @@
 import datetime
+<<<<<<< HEAD
 FIRST_DAY_OF_YEAR = date(2017, 1, 1)
 
 
@@ -30,3 +31,12 @@ fixdate = fix_date_string(datestring)
 
 #datetime.datetime(2017, 3, 22, 21, 54, 0, 916534)
 """
+=======
+from datetime import date
+FIRST_DAY_OF_YEAR = date(2017, 1, 1)
+
+def numberofdays():
+    today = date(2017, 3, 23) #yeah, obviously I need to figure out what this really is
+    delta = (today) - (FIRST_DAY_OF_YEAR)
+    return delta.days
+>>>>>>> master

@@ -1,10 +1,16 @@
 from utils.micdata import parse_data
+<<<<<<< HEAD
 from utils.datemaker import numberofdays
 from utils.mapmaker import make_locator_map
 from utils.bot2story.py import make_story
+=======
+from utils.calcs import location_of_death
+from utils.bot2story import make_story
+>>>>>>> master
 
 jdata = parse_data()
 
+<<<<<<< HEAD
 story = make_story()
 print(story)
 
@@ -42,3 +48,15 @@ def average():
     dayssofar = numberofdays()
     avg = (dayssofar)/(deaths)
     return round(avg)
+=======
+def bot2():
+    jdata = parse_data()
+    result = jdata[0]
+    city = location_of_death(result)
+    story = make_story(result)
+    return final
+
+def run_it():
+    storymap = bot2()
+    print(storymap)
+>>>>>>> master

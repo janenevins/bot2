@@ -29,5 +29,8 @@ def parse_data():
     thefile.close()
 
     return json.loads(rawtxt)
+<<<<<<< HEAD
 
 jdata = parse_data
+=======
+>>>>>>> master
