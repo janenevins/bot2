@@ -29,3 +29,5 @@ def parse_data():
     thefile.close()
 
     return json.loads(rawtxt)
+
+jdata = parse_data
