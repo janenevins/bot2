@@ -1,6 +1,6 @@
 from utils.micdata import parse_data
 from utils.datemaker import numberofdays
-from utils.bot2story.py import make_story
+from utils.bot2story import make_story
 
 jdata = parse_data()
 
