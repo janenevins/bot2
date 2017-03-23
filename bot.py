@@ -7,3 +7,8 @@ def bot():
     story = make_story(result, jdata)
 
     return story
+
+
+if __name__ == '__main__':
+    txt = bot()
+    print(txt)
