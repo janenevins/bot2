@@ -1,31 +1,32 @@
-from utils.datemaker import numberofdays
+from datetime import datetime
+import re
+
+
+
+def number_of_days_in_2017_so_far():
+    startdate = datetime(2017, 1, 1)
+    today = datetime.now()
+    delta = (today) - (startdate)
+    return delta.days
+
+
 
 def location_of_death(result): #Getting the city
     bio = result['bio']
-    import re
     regex = r"\bin\b (\w+)"
     matches = re.findall(regex, bio)
-    for match in matches:
-        return match
+    if matches:
+        return matches[0]
 
-def sevtn_killed(jdata):#tells me the number of people murdered in 2017 - 7
+def count_killed_in_year(jdata, year):
     yrlist = []
     for row in jdata:
-        if row['filters'][0] == '2017':
+        if row['filters'][0] == str(year):
             yrlist.append(row)
 
     return len(yrlist)
 
-def sixtn_killed(jdata):#tells me the number of people murdered in 2016 - 22
-    yr16list = []
-    for row in jdata:
-        if row['filters'][0] == '2016':
-            yr16list.append(row)
-
-    return len(yr16list)
-
-def average(jdata): #average number of days per death
-    deaths = sevtn_killed(jdata)
-    dayssofar = numberofdays()
-    avg = (dayssofar)/(deaths)
-    return round(avg)
+def average_deaths_in_2017(jdata):
+    deathcount = count_killed_in_year(jdata, 2017)
+    days_so_far = number_of_days_in_2017_so_far()
+    return round((days_so_far)/(deathcount))
