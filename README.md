@@ -1,6 +1,6 @@
 What does this bot do?
-This bot takes in data and the current date to return a map url and text.
-
+This bot takes in a data and the current date to return a map url and text that says.
+The text says: 
 Every {average} days, a transgender person is killed in America in 2017.
 
 {thisyear} people were murdered this year. {lastyear} last year.

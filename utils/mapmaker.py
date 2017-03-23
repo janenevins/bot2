@@ -13,5 +13,6 @@ def make_locator_map(city):
 
     return preq.url
 
-#ideally this woudl be all the cities for which I have data, bit some of the bios do not have cityies
+#ideally this woudl be all the cities for which I have data,
+#but some of the bios do not have cities
 #so I don't know how to deal with that
